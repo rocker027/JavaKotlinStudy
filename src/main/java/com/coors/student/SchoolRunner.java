@@ -4,6 +4,11 @@ import java.util.Scanner;
 
 public class SchoolRunner {
     public static void main(String[] args) {
+//        userInput();
+
+    }
+
+    private static void userInput() {
         System.out.print("請輸入學生姓名:");
         Scanner scanner = new Scanner(System.in);
         String name = scanner.next();
@@ -15,5 +20,6 @@ public class SchoolRunner {
 
         Student student = new Student(name , english , math);
         student.print();
+        System.out.println("最高分 : " + student.getHighest());
     }
 }

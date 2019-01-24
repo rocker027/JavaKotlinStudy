@@ -12,6 +12,20 @@ public class Student {
         this.math = math;
     }
 
+    public int getHighest() {
+        // verison 1
+//        int max = 0;
+//        if (english > math) {
+//            max = english;
+//        } else {
+//            max = math;
+//        }
+//        return max;
+
+        // version 2
+        return (english > math) ? english : math;
+    }
+
     public String getId() {
         return id;
     }
