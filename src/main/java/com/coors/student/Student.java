@@ -5,6 +5,7 @@ public class Student {
     private String name;
     private int english;
     private int math;
+    static int pass = 60;
 
     public Student(String name, int english, int math) {
         this.name = name;
@@ -24,6 +25,14 @@ public class Student {
 
         // version 2
         return (english > math) ? english : math;
+    }
+
+    public String getRank() {
+        if (getAverage() >= pass) {
+            return "PASS";
+        } else {
+            return "FAILED";
+        }
     }
 
 
@@ -64,6 +73,6 @@ public class Student {
     }
 
     public void print() {
-        System.out.println(name + "\t" + english + "\t" + math);
+        System.out.println(name + "\t" + english + "\t" + math + "\t" + getRank());
     }
 }

@@ -1,5 +1,6 @@
 package com.coors.parking;
 
+import java.time.Duration;
 import java.time.LocalDateTime;
 
 public class Car {
@@ -9,12 +10,25 @@ public class Car {
      * leave 出場時間
      */
     private String id;
-    private long enter;
-    private long leave;
+    private LocalDateTime enter;
+    private LocalDateTime leave;
 
-    public Car(String id, long enter) {
+    public Car(String id, LocalDateTime enter) {
         this.id = id;
         this.enter = enter;
+    }
+
+    /**
+     * 計算總停留時間
+     * @return 分鐘數
+     */
+    public Long getDuration() {
+        Duration duraton = Duration.between(getEnter(), leave);
+        return duraton.toMinutes();
+    }
+
+    public void leave() {
+        setLeave(LocalDateTime.now());
     }
 
     public String getId() {
@@ -25,19 +39,21 @@ public class Car {
         this.id = id;
     }
 
-    public long getEnter() {
+    public LocalDateTime getEnter() {
         return enter;
     }
 
-    public void setEnter(long enter) {
+    public void setEnter(LocalDateTime enter) {
         this.enter = enter;
     }
 
-    public long getLeave() {
+    public LocalDateTime getLeave() {
         return leave;
     }
 
-    public void setLeave(long leave) {
-        this.leave = leave;
+    public void setLeave(LocalDateTime leave) {
+        if (leave.isAfter(enter)) {
+            this.leave = leave;
+        }
     }
 }

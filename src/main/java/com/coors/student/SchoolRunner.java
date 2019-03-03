@@ -5,7 +5,9 @@ import java.util.Scanner;
 public class SchoolRunner {
     public static void main(String[] args) {
 //        userInput();
-
+//        com.coors.Student.printTest();
+        GraduateStudent gstu = new GraduateStudent("coors" , 50,30,70);
+        gstu.print();
     }
 
     private static void userInput() {

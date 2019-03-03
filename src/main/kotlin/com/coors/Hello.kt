@@ -1,5 +1,7 @@
 package com.coors
 
+import com.coors.kotlin.random
+
 /**
  * Kotlin 程式進入點
  */

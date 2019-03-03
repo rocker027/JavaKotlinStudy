@@ -12,8 +12,17 @@ import java.util.Date;
 
 public class Tester {
     public static void main(String[] args) {
+        LocalDateTime enter = LocalDateTime.of(2019, 1, 28, 13, 0);
+//        LocalDateTime leave = LocalDateTime.of(2019, 1, 28, 15, 0);
+        Car car = new Car("AAA-1234",enter);
+//        car.setLeave(leave);
+        car.leave();
+        System.out.printf("Car Leave Time " + car.getLeave());
+        System.out.printf("Car 總停留分鐘數 Time " + car.getDuration());
+
+
         // java8
-        java8();
+//        java8();
 
 //        dateTimeTest();
     }
