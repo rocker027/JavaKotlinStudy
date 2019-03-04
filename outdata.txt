@@ -1,0 +1,3 @@
+test kotlin io write1
+test kotlin io write2
+test kotlin io write3
