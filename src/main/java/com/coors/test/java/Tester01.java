@@ -15,13 +15,4 @@ public class Tester01 extends TesterJava {
         this.sex = sex;
     }
 
-    @Override
-    public String getName() {
-        return this.name;
-    }
-
-    @Override
-    public int getAge() {
-        return this.age;
-    }
 }

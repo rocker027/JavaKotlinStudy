@@ -16,6 +16,6 @@ public class Hello {
 
         TesterJava tester01 = new Tester01("coors", 20);
         System.out.printf(tester01.getName() + " , " + tester01.getAge());
-        ((Tester01) tester01).setSex();
+        ((Tester01) tester01).setSex("man");
     }
 }
